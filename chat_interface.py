@@ -1137,41 +1137,46 @@ def main():
     st.title("Knowledge Base Agent")
     st.write("Welcome to the Knowledge Base Agent - Agent for Knowledge Base Analysis")
 
-    with st_fixed_container(mode="fixed", position="bottom"):
-        st.markdown("""
-        <style> 
-        .stChatInputContainer > div {
-        border-color: grey;
-        }
-        </style>
-        """, unsafe_allow_html=True)
-        st.markdown("""
+    # Fixed chat input at bottom
+    st.markdown("""
         <style>
-        /* Style the chat input container */
-        .stChatInputContainer {
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.5) !important;
+        /* Fixed chat input container at bottom */
+        .stChatInput {
+            position: fixed !important;
+            bottom: 20px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: calc(100% - 100px) !important;
+            max-width: 1200px !important;
+            z-index: 1000 !important;
+            background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px) !important;
             -webkit-backdrop-filter: blur(10px) !important;
-            border-radius: 8px !important;
+            border-radius: 12px !important;
+            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+            padding: 8px 16px !important;
         }
         
-        /* Style the chat input box */
-        .stChatInput {
-            border: 1px solid grey !important;
-            border-radius: 8px !important;
-            background: rgba(255, 255, 255, 0.7) !important;
+        /* Add padding to bottom of main content to prevent overlap */
+        .main .block-container {
+            padding-bottom: 100px !important;
         }
         
-        /* Style the chat input when focused */
-        .stChatInput:focus {
-            border: 1px solid grey !important;
+        /* Style the chat input textarea */
+        .stChatInput textarea {
+            border: none !important;
+            background: transparent !important;
+        }
+        
+        .stChatInput textarea:focus {
             box-shadow: none !important;
-            background: rgba(255, 255, 255, 0.8) !important;
+            outline: none !important;
         }
         </style>
-        """, unsafe_allow_html=True)
-        user_query = st.chat_input("Enter your query")
+    """, unsafe_allow_html=True)
+    
+    user_query = st.chat_input("Enter your query")
 
 
 
@@ -1229,8 +1234,8 @@ def main():
                     if chat["response"].pdf_path:
                         st.markdown(
                                     download_button(
-                                        chat["response"].markdown_report,
-                                        chat["response"].pdf_path,
+                                        chat["response"].markdown_report.replace("output/", ""),
+                                        chat["response"].pdf_path.replace("output/", ""),
                                         "Download Report PDF",
                                         chat["response"].document_path
                                     ),
