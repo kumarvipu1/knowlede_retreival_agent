@@ -29,7 +29,7 @@ pandas
 tabulate
 
 # Vector database
-pinecone-client
+pinecone
 
 # Async utilities
 nest-asyncio
