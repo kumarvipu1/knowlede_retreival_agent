@@ -1,0 +1,29 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: calc(100% - 23rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 10px 20px;
+    border-top: 1px solid gray;
+    z-index: 1000;
+    margin-left: 22rem;
+}
+
+.footer p {
+    margin: 0;
+    text-align: left;
+    font-size: 8px;
+}
+
+.footer img {
+    width: 60px;
+    height: auto;
+}
+
+div[data-testid="stMarkdownContainer"] > .footer p {
+    font-size: 12px; /* or whatever your desired footer font size is */
+  }

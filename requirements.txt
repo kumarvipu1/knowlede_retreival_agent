@@ -1,0 +1,44 @@
+# Core dependencies
+requests
+streamlit
+python-dotenv
+psutil
+
+# PDF processing
+pdf2image
+PyPDF2
+markdown-pdf
+
+# Image processing
+Pillow
+
+# Clipboard utilities
+pyperclip
+st-copy-to-clipboard
+
+
+# AI/ML frameworks
+openai
+pydantic
+pydantic-ai
+langchain-openai
+langchain-experimental
+
+# Data processing
+pandas
+tabulate
+
+# Vector database
+pinecone-client
+
+# Async utilities
+nest-asyncio
+
+# UI components
+streamlit-elements
+
+# Logging/Monitoring
+logfire
+
+# Text processing
+regex

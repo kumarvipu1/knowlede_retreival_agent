@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+        .stMain{
+            zoom: 80%;
+            background: linear-gradient(-48deg, #04162E 58.76%, #3A2050 79.15%, #503360 93.2%) no-repeat fixed center;
+        }
+        .stAppViewContainer {
+            background: linear-gradient(-48deg, #04162E 58.76%, #3A2050 79.15%, #503360 93.2%) no-repeat fixed center;
+
+        } 
+        [data-testid="stToast"]{
+            zoom: 80%
+        }
+        [data-testid="stAlertContainer"]{
+            width: 125%
+        }
+        
+        html, body, [class*="css"] {
+            font-family: 'Titillium Web';
+        }
+                body, .stApp, .stMarkdown, .stText, h1, h2, h3, h4, h5, h6, label, div, .stTextInput div[role="textbox"], .stChatInput textarea {
+            font-family: 'Titillium Web' !important;
+            
+        }
+
+        .stApp {
+            background: linear-gradient(-48deg, #04162E 58.76%, #3A2050 79.15%, #503360 93.2%) no-repeat fixed center;
+        }
+        .stSidebar{
+            background: linear-gradient(-48deg, #04162E 58.76%, #3A2050 79.15%, #503360 93.2%) no-repeat fixed center;
+        }       
+        header.stAppHeader {
+            background: linear-gradient(-48deg, #04162E 58.76%, #3A2050 79.15%, #503360 93.2%) no-repeat fixed center;
+        }
+        .stRadio label, .stButton > button {
+            color: #FFFFFF !important;
+        }
+        label[data-baseweb="radio"] .st-c2 {
+            background-color: #FFFFFF !important;
+        }
+        
+        
+        .stButton > button {
+            background-color: #4bfa91 !important;
+            color: #03152d !important;
+            border-color: #4bfa91 !important;
+        }
+        .stButton > button:hover {
+            background-color: #3a2050 !important;
+            color: #4bfa91 !important;
+            border-color: #3a2050 !important;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .stButton button {
+        width: 100%;  /* Make buttons take full column width */
+        font-size: 16px;  /* Adjust font size for uniformity */
+        
+        }
+        
+
+        .stTextInput div[role="textbox"], .stChatInput textarea {
+            color: #000000 !important;
+            background-color: #FFFFFF !important;
+            font-size: 20px;
+        }
+          button[data-testid="stChatInputSubmitButton"] {
+            background-color: transparent !important; /* Keep the button background white */
+        }
+        button[data-testid="stChatInputSubmitButton"] svg path {
+            fill: #4bfa91 !important; /* Set the default icon color to green */
+        }
+        button[data-testid="stChatInputSubmitButton"]:not([disabled]) svg path {
+            fill: #03152d !important; /* Icon changes to blue on hover */
+        }
+                button[data-testid="stChatInputSubmitButton"]:not([disabled]):hover svg path {
+            fill: #50607a !important; /* Icon changes to blue on hover */
+        }
+
+        .stSidebar {
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            min-width: 340px !important;
+            max-width: 340px !important;
+            zoom: 80%;
+        }
+        /* removes sidebar resizing */
+        div[style*="position: absolute"] {
+            user-select: none !important;
+            cursor: default !important;
+            pointer-events: none !important;
+        }
+
+        div[role="radiogroup"] {
+           width: 125%;
+        }
+
+        .stRadio label {
+        display: flex;
+        align-items: center;
+        padding: 10px 0 !important; 
+        /* color: #4bfa91 !important; */
+    }
+
+
+    label[data-baseweb="radio"] .st-di {
+        background-color: #D3D3D3 !important;
+    }
+
+
+    .st-az {
+        background-color: #FFFFFF !important;  /* White background for the radio button container */
+    }
+
+    label[data-baseweb="radio"] .st-bh {
+        background-color: #4bfa91 !important;
+    }
+    
+    .st-bh {
+        background-color: #000000 !important;}            
+                
+    label[data-baseweb="checkbox"] span {
+            border-color: #FFFFFF !important;
+            background-color: #000000 !important;
+           
+                }
+
+    div[data-baseweb="textarea"] {
+                border-bottom-color: #FFFFFF !important;
+                border-left-color: #FFFFFF !important;
+                border-right-color: #FFFFFF !important;
+                border-top-color: #FFFFFF !important;}
+    .st-emotion-cache-q5gmix {
+                background: linear-gradient(-48deg, #04162E 58.76%, #3A2050 79.15%, #503360 93.2%) no-repeat fixed center;}
+
+    button[data-testid="stBaseButton-secondary"] {
+        background-color: #4bfa91 !important;  /* Initial background color */
+        color: #03152d !important;  /* Initial text color */
+        padding: 0.25rem 0.5rem;
+        min-height: 2rem;
+        min-width: 2rem;
+        border-color: #4bfa91 !important;  /* Initial border color */
+        transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease; /* Add transition */
+        width: 125%;
+    }
+
+    
+    button[data-testid="stBaseButton-secondary"]:hover {
+        background-color: #3a2050 !important;  /* Background on hover */
+        color: #4bfa91 !important;  /* Text color on hover */
+        border-color: #3a2050 !important;  /* Border color on hover */
+    }
+    .st-emotion-cache-ocqkz7{
+        width: 125%;
+    }
+
+    .st-emotion-cache-1n7d122:hover {
+        color: #4bfa91 !important;
+    }
+    .st-emotion-cache-1n7d122:hover svg {
+        fill: #4bfa91;
+    }
+
+    .stElementContainer[class*="st-key-web_search"] button[data-testid="stBaseButton-secondary"] {
+        padding: 0.25rem 0.5rem !important;
+        min-height: 2rem !important;
+        min-width: 2rem !important;
+        width: auto !important;
+        }
+
+    .stElementContainer[class*="st-key-summary"] button[data-testid="stBaseButton-secondary"] {
+        padding: 0.25rem 1rem !important;
+        min-height: 2rem !important;
+        min-width: 3rem !important;
+        width: auto !important;
+    }
+    
+    
+    /* Ensure the icons within these buttons are centered */
+    .st-emotion-cache-1kfcwut {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem !important;
+    }
+
+    .st-d7 {
+        caret-color: #000000;
+    }
+
+    [data-testid="stMainBlockContainer"] {
+        max-width: 70rem;
+        margin: 0 auto; /* Optional: Center the block */
+      }
+
+
+    [data-testid="stBottomBlockContainer"] {
+        max-width: 70rem;
+        margin: 0 auto; 
+      }
+
+      [data-testid="stChatMessage"] {
+        width: 870.417px;
+      }
+      .stChatMessage.st-emotion-cache-janbn0.eeusbqq4 {
+        background-color: #6987FF !important;}
+
+      div[data-testid="stHeading"]:not([data-testid="stSidebarContent"] *) {
+        text-align: center;
+    }
+    
+
+    .custom-text p {
+        font-size: 22px !important; /* Adjust the font size as needed */
+        width: 100% !important;
+    }
+    /* Main Block Markdown Container */
+    /* div[data-testid="stMarkdown"]:not([data-testid="stSidebarContent"] *) {
+        width: 53rem !important;
+        max-width: 53rem !important;
+    } */
+
+    div[data-testid="stMarkdownContainer"]:not([data-testid="stSidebarContent"] *) p {
+        font-size: 22px;
+        width: 125%;
+    }
+    
+    div[data-testid="stMarkdownContainer"]:not([data-testid="stSidebarContent"] *) ul li {
+        font-size: 20px;
+    }
+      
+    div[data-testid="stSidebarContent"] h2 {
+        font-size: 32px;
+    }
+
+    div[data-testid="stSidebarContent"] p {
+        font-size: 20px;
+    }
+
+    .contact-button {
+        font-size: 20px;
+    }
+
+    .download-button {
+        font-size: 20px;
+    }
+    
+    .stMain [data-testid="stAlertContainer"] {
+        width: 100% !important;
+    }
+
+    /********************************** Chat Icon Changes **********************************/
+    /* User input Icon */
+    div[data-testid="stChatMessageAvatarUser"]{
+        background-color: transparent !important;
+    }
+
+    div[data-testid="stChatMessageAvatarUser"] svg {
+        width: 1.7rem;
+        height: 1.7rem;
+        color: white;
+    }
+
+    /* AI Assistant Icon */
+    [data-testid="stChatMessageAvatarAssistant"] {
+        background-color: transparent !important;
+    }
+
+    [data-testid="stChatMessageAvatarAssistant"] svg {
+        color: white;
+        width: 1.7rem !important;
+        height: 1.7rem !important;
+    }
+    
+    /* TAG Design */
+    [data-testid="stMarkdownContainer"] code {
+        padding: 0.2em 0.8em;
+        margin: 0px;
+        border-radius: 0.75rem;
+        background:#6950FF;
+        color: white;
+    }
+
+    /* Listbox container */
+    [data-testid="stMainMenuList"] {
+        background-color: #000000 !important;
+    }
+
+    /* Menu items */
+    [data-testid="stMainMenuList"] ul {
+        background-color: #000000 !important;
+    }
+
+    [data-testid="stMainMenuList"] li {
+        background-color: #000000 !important;
+        color: #FFFFFF !important;
+    }
+
+    /* Hover state */
+    [data-testid="stMainMenuList"] li:hover {
+        background-color: #333333 !important;
+        color: #FFFFFF !important;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Divider */
+    [data-testid="stMainMenuDivider"] {
+        border-color: #333333 !important;
+    }
+
+    [data-testid="edit-theme"] button[data-testid="stBaseButton-secondary"] {
+        width: 100% !important;
+    }
+
+    .st-emotion-cache-1xe59u8 button[data-testid="stBaseButton-secondary"] {
+        width: 100% !important;
+    }
+
+    .st-emotion-cache-8g1jhf {
+        margin-left: 109px !important;
+    }
+
+    /* Source Voting Form Design */
+
+    /* Submit Button */
+    .st-emotion-cache-kxlwc0{
+        width: 125%;
+        background-color: #4bfa91 !important;
+        color: #03152d !important;
+        border-color: #4bfa91 !important;
+    }
+
+    .st-emotion-cache-kxlwc0:hover {
+        background-color: #3a2050 !important;
+        color: #4bfa91 !important;
+        border-color: #3a2050 !important;
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    [data-testid="stForm"] {
+    width: 125%;
+   }
+
+   [data-testid="stWidgetLabel"] {
+    width: 150%;
+   }
+
+   /* 5 Star Rating */
+
+    /* Style for the feedback button group container */
+    .stButtonGroup {
+        margin-left: -20px;
+        margin-top: -7.5px;
+    }
+
+    /* Hover effect for individual star buttons */
+    .stButtonGroup button:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
+        color: #FACA2B;
+    }
+
+    /* .st-emotion-cache-eq2h7m {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-size: 0.85em;
+    } */
+
+    .rate-text {
+        margin-left: -5px;
+        margin-top: -15px;
+    }
+
+/********************************** Feedback Dialog Styles **********************************/
+    .st-key-dialog_time_rating [data-baseweb="button-group"] button:nth-child(5) {
+        display: none !important;
+    }
+
+    [data-testid="stDialog"] [data-baseweb="button-group"] {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        width: calc(100% - 0.5rem);
+        margin: 0 1rem;
+    }
+
+    [data-testid="stDialog"] [data-testid="stCaptionContainer"] {
+        display: flex;
+        text-align: center;
+        width: calc(130%);
+        margin-left: -15px;
+    }
+
+    [data-testid="stDialog"] [data-testid="stHorizontalBlock"] {
+        width: calc(101%);
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    /* Hide dialog title and adjust spacing */
+    [data-testid="stDialog"] div[role="dialog"] > div:first-child {
+        display: none !important;
+    }
+
+    [data-testid="stDialog"] div[role="dialog"] {
+        padding-top: 0 !important;
+        background: white !important;
+    }
+
+    /* Dialog color styles */
+    [data-testid="stDialog"] [data-testid="stIconMaterial"] {
+        color: #deb04d !important;
+    }
+
+    [data-testid="stDialog"] [data-testid="stHeading"] h3 {
+        color: #03152d !important;
+    }
+
+    [data-testid="stDialog"] [data-testid="stCaptionContainer"] p {
+        color: #03152d !important;
+    }
+
+    [class*="st-key-rate_"] .stButton button p, 
+    [class*="st-key-test_rate"] .stButton button p {
+        font-size: 16px !important;
+        width: 100% !important;
+    }
+
+    [class*="st-key-clear_memory_"] .stButton button p {
+        font-size: 16px !important;
+        width: 100% !important;
+    } 
+
+    .stDialog [data-testid="stAlertContainer"] {
+        width: 100% !important;
+    }
+
+    .stDialog [data-testid="stAlertContainer"] p{
+        color: #03152d !important;
+        font-size: 16px !important;
+    }
+
+    /* Make all stars in time selection independent */
+    [class*="st-key-time_"] [data-baseweb="button-group"] button:not(:first-child) {
+        display: none !important;
+    }
+
+    /* Center the captions */
+    [data-testid="stCaptionContainer"] {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Style selected/unselected states */
+    [data-baseweb="button-group"] button {
+        transition: transform 0.2s ease;
+    }
+
+    [data-baseweb="button-group"] button:hover {
+        transform: scale(1.1);
+    }
+
+    [class*="st-key-time_"] [data-baseweb="button-group"] button:not(:first-child) {
+        display: none !important;
+    }
+    
+    /* Center the captions */
+    [data-testid="stCaptionContainer"] {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Style selected/unselected states */
+    [data-baseweb="button-group"] button {
+        transition: transform 0.2s ease;
+    }
+    
+    [data-baseweb="button-group"] button:hover {
+        transform: scale(1.1);
+    }
+
+    .stElementContainer.element-container.st-emotion-cache-18wbbsg.e1f1d6gn4 p {
+        width: 100% !important;
+    }

@@ -1,0 +1,110 @@
+/* ---------------------------------------- User Support Section ---------------------------------------- */
+/* Import Material Symbols font */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* ---------------------- Styles for the expander header ---------------------- */
+[data-testid="stExpander"] {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: Left;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 125% !important;
+
+}
+/* ---------------------- Styles for the Expander header ---------------------- */
+
+
+/* ---------------------- Container & Support styling ---------------------- */
+.support-container-content {
+    padding: 10px 0;
+}
+
+.support-text {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    width: 125%;
+}
+/* ---------------------- Container & Support styling ---------------------- */
+
+
+/* ---------------------- Contact Button ---------------------- */
+.contact-button {
+    background-color: #4bfa91;
+    color: #03152d;
+    width: 125%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-color: #4bfa91;
+    outline: none;
+}
+
+.contact-button:focus {
+    border-color: #4bfa91; 
+    outline: none; 
+}
+
+.contact-button:hover {
+    background-color: #3a2050;
+    color: #4bfa91;
+}
+/* ---------------------- Contact Button ---------------------- */
+
+
+
+/* ---------------------- Download Button ---------------------- */
+.stDownloadButton button {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    width: 125% !important;
+    border: 2px solid #FFFFFF !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.stLinkButton a {
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    width: 125% !important;
+    border: 2px solid #FFFFFF !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.stLinkButton a:hover {background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+.stDownloadButton button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+.button-icon {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+/* ---------------------- Download Button ---------------------- */
+
+
+/* ----------------------  Custom styles for the expander arrow ----------------------  */
+[data-testid="stExpander"] div[role="button"] svg {
+    color: #FFFFFF !important;
+}
+
+[data-testid="stExpanderToggleIcon"]{
+    margin-right: 2px;
+}
+/* ----------------------  Custom styles for the expander arrow ----------------------  */
