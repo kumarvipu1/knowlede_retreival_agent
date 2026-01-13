@@ -1137,17 +1137,17 @@ def main():
     st.title("Knowledge Base Agent")
     st.write("Welcome to the Knowledge Base Agent - Agent for Knowledge Base Analysis")
 
-    # Fixed chat input at bottom
+    # Fixed chat input at bottom - responsive design
     st.markdown("""
         <style>
         /* Fixed chat input container at bottom */
         .stChatInput {
             position: fixed !important;
-            bottom: 20px !important;
+            bottom: 70px !important;
             left: 50% !important;
             transform: translateX(-50%) !important;
-            width: calc(100% - 100px) !important;
-            max-width: 1200px !important;
+            width: 90% !important;
+            max-width: 800px !important;
             z-index: 1000 !important;
             background: rgba(255, 255, 255, 0.95) !important;
             backdrop-filter: blur(10px) !important;
@@ -1156,22 +1156,51 @@ def main():
             border: 1px solid rgba(0, 0, 0, 0.1) !important;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
             padding: 8px 16px !important;
+            box-sizing: border-box !important;
+        }
+        
+        /* Responsive adjustments for different screen sizes */
+        @media (min-width: 768px) {
+            .stChatInput {
+                width: 80% !important;
+                max-width: 900px !important;
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .stChatInput {
+                width: 60% !important;
+                max-width: 1000px !important;
+            }
+        }
+        
+        @media (min-width: 1600px) {
+            .stChatInput {
+                width: 50% !important;
+                max-width: 1000px !important;
+            }
         }
         
         /* Add padding to bottom of main content to prevent overlap */
         .main .block-container {
-            padding-bottom: 100px !important;
+            padding-bottom: 140px !important;
         }
         
         /* Style the chat input textarea */
         .stChatInput textarea {
             border: none !important;
             background: transparent !important;
+            width: 100% !important;
         }
         
         .stChatInput textarea:focus {
             box-shadow: none !important;
             outline: none !important;
+        }
+        
+        /* Ensure the input container doesn't overflow */
+        .stChatInput > div {
+            width: 100% !important;
         }
         </style>
     """, unsafe_allow_html=True)
@@ -1302,21 +1331,6 @@ def main():
                         except Exception as e:
                             st.info(f"No document preview available")
 
-                    # Reduce space between Document Preview and Key Metrics even further
-                    st.markdown("<div style='margin-top: -30px;'></div>", unsafe_allow_html=True)
-                     
-                    # Display metrics in tiles with error boundary
-                    st.markdown("--------------------------------")
-                    st.subheader("Key Metrics")
-                    try:
-                        display_metrics(chat["response"].metrics_dict)
-                        st.markdown("\n\n\n\n")
-                    except Exception as e:
-                        st.error(f"""
-                        Failed to display metrics
-                        Error type: {type(e).__name__}
-                        Error details: {str(e)}
-                        """)
             
             except Exception as e:
                 st.warning(f"""
