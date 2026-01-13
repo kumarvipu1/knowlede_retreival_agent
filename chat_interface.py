@@ -582,7 +582,11 @@ def st_fixed_container(
         )
 
     with fixed_container:
-        return st.container(height=height, border=border)
+        # Only pass height if it's not None (Streamlit doesn't accept None for height)
+        if height is not None:
+            return st.container(height=height, border=border)
+        else:
+            return st.container(border=border)
 
 
 def download_button(object_to_download, download_filename, button_text, document_path):
