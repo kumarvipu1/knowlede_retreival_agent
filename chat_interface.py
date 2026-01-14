@@ -1259,17 +1259,6 @@ def main():
                         chat["response"].markdown_report.replace("![](assets/vizyx_logo.png)", "")
                     )
                     
-                    # Add download button for PDF with error handling and unique key
-                    if chat["response"].pdf_path:
-                        st.markdown(
-                                    download_button(
-                                        chat["response"].markdown_report.replace("output/", ""),
-                                        chat["response"].pdf_path.replace("output/", ""),
-                                        "Download Report PDF",
-                                        chat["response"].document_path
-                                    ),
-                            unsafe_allow_html=True
-                        )
 
                     st.markdown("--------------------------------")
                     
