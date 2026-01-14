@@ -30,7 +30,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 # Copy application code
 COPY . .
-
+COPY documents/
 # Expose port
 EXPOSE 8080
 
